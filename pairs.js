@@ -18,8 +18,29 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
-}
+  let pairArrayOne = [];
+  let pairArrayTwo =[];
+  let pairArrays = [];
+  if (names.length % 2 === 0){
+    for (let i=0 ; i <= names.length/2 ; i++){
+      randomNames = names.getRandom();
+      console.log('in first for loop - random name is: ' + randomNames);
+      pairArrayOne.push(randomNames)}
+    pairArrayTwo = names;
+    pairArrays = [pairArrayOne, pairArrayTwo];
+    return pairArrays};
+  if (names.length === 0){
+    pairArrays = []
+    return pairArrays
+  }; 
+  if (names.length % 2 !== 0){
+    for (let i=0 ; i <= names.length/2+1 ; i++){
+      randomNames = names.getRandom();
+      pairArrayOne.push(randomNames)}
+    pairArrayTwo = names;
+    pairArrays = [pairArrayOne, pairArrayTwo];
+    return pairArrays};
+    };
 
 module.exports = pairs;
 
